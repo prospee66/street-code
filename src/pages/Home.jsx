@@ -321,7 +321,7 @@ export default function Home() {
                   {status === 'error' && (
                     <div className="form-error" style={{ marginBottom: 16 }}>
                       ⚠️ Failed to send. Please email us at{' '}
-                      <a href="mailto:addaimichael3355@gmail.com">addaimichael3355@gmail.com</a>
+                      <a href="mailto:streetcode139@gmail.com">streetcode139@gmail.com</a>
                     </div>
                   )}
 

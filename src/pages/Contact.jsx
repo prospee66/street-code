@@ -3,7 +3,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 
 /* ── Web3Forms ───────────────────────────────────────────
    1. Go to https://web3forms.com
-   2. Enter addaimichael3355@gmail.com → click "Create Access Key"
+   2. Enter streetcode139@gmail.com → click "Create Access Key"
    3. Copy the key into your .env file as:
       VITE_WEB3FORMS_KEY=your_key_here                    */
 const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY || ''
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: 'Can I collaborate with Street Code?',
-    a: 'We love collaborations! If you\'re an artist, influencer, or creator, email us at addaimichael3355@gmail.com with your proposal.',
+    a: 'We love collaborations! If you\'re an artist, influencer, or creator, email us at streetcode139@gmail.com with your proposal.',
   },
 ]
 
@@ -161,7 +161,7 @@ export default function Contact() {
                   {status === 'error' && (
                     <div className="form-error">
                       ⚠️ Something went wrong. Please try again or email us directly at{' '}
-                      <a href="mailto:addaimichael3355@gmail.com">addaimichael3355@gmail.com</a>
+                      <a href="mailto:streetcode139@gmail.com">streetcode139@gmail.com</a>
                     </div>
                   )}
 
@@ -273,7 +273,7 @@ export default function Contact() {
 
               <div className="contact-info-item">
                 <h4>📧 Email</h4>
-                <a href="mailto:addaimichael3355@gmail.com">addaimichael3355@gmail.com</a>
+                <a href="mailto:streetcode139@gmail.com">streetcode139@gmail.com</a>
               </div>
 
               <div className="contact-info-item">

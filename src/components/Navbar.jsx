@@ -117,9 +117,9 @@ export default function Navbar() {
 
         {/* Contact snippet */}
         <div className="sidebar__contact">
-          <a href="mailto:addaimichael3355@gmail.com" className="sidebar__contact-row">
+          <a href="mailto:streetcode139@gmail.com" className="sidebar__contact-row">
             <span>📧</span>
-            <span>addaimichael3355@gmail.com</span>
+            <span>streetcode139@gmail.com</span>
           </a>
           <a href="tel:+233536946759" className="sidebar__contact-row">
             <span>📞</span>

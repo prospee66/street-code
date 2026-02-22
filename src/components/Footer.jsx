@@ -46,7 +46,7 @@ export default function Footer() {
           <p>&copy; 2026 Street Code. All rights reserved.</p>
           <p>
             Takoradi, Ghana &nbsp;·&nbsp;{' '}
-            <a href="mailto:addaimichael3355@gmail.com">addaimichael3355@gmail.com</a>
+            <a href="mailto:streetcode139@gmail.com">streetcode139@gmail.com</a>
           </p>
         </div>
       </div>
