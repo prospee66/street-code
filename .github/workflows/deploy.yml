@@ -1,0 +1,46 @@
+name: Build & Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main        # runs every time you push to main
+  pull_request:
+    branches:
+      - main        # also runs on PRs (build-only, no deploy)
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1 ── Check out your code
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2 ── Set up Node.js (match your local version)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # 3 ── Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # 4 ── Build the React app
+      - name: Build
+        run: npm run build
+        env:
+          VITE_WEB3FORMS_KEY: ${{ secrets.VITE_WEB3FORMS_KEY }}
+
+      # 5 ── Deploy dist/ to Netlify
+      - name: Deploy to Netlify
+        uses: netlify/actions/cli@master
+        with:
+          args: deploy --dir=dist --prod
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        # Only deploy on pushes to main, not on pull requests
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
